@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="007d6bbb-c6f3-419b-9528-68354eea111c" name="4466" url="http://116.118.50.53">
+        <fileTransfer rootFolder="/themes.cathtmlcss.net/2023/02/4466" host="116.118.50.53" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

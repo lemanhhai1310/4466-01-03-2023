@@ -1,0 +1,6 @@
+body{
+  font-family: $font-Roboto;
+  @include media-breakpoint-up('m'){
+    background-image: url("images/bg.png");
+  }
+}

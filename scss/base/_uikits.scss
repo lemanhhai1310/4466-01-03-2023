@@ -1,0 +1,22 @@
+.uk{
+  &-height{
+    &-min{
+      &-small{
+        min-height: 150px;
+      }
+      &-medium{
+        min-height: 300px;
+      }
+      &-large{
+        min-height: 450px;
+      }
+    }
+  }
+  &-container{
+    @include media-breakpoint-up('m'){
+      $x:120px;
+      padding-left: #{$x};
+      padding-right: #{$x};
+    }
+  }
+}

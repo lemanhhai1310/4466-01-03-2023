@@ -1,0 +1,60 @@
+.home{
+  &__box{
+    position: relative;
+    $color: #9e884c;
+    background-color: #{$color};
+    padding-right: 120px;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 100%;
+      width: 100vw;
+      background-color: #{$color};
+    }
+    &__title{
+      font-size: 30px;
+    }
+    &__desc{
+
+    }
+    &__img{
+      top: -96px;
+      right: -74px;
+      z-index: 10;
+    }
+    &__c1{
+      background-color: #323232;
+      width: 160px;
+      writing-mode: vertical-lr;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      bottom: 0;
+      z-index: 9;
+    }
+  }
+  &__divider{
+
+  }
+  &__copyRight{
+    writing-mode: vertical-lr;
+    position: absolute;
+    bottom: 48px;
+    right: 45px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+    align-items: center;
+    &:before{
+      content: "";
+      margin-bottom: 52px;
+      width: 1px;
+      height: 81px;
+      display: flex;
+      background-color: #9e884c;
+    }
+  }
+}

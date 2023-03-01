@@ -1,0 +1,108 @@
+.header{
+  $x:46px;
+  padding-top: #{$x};
+  padding-bottom: #{$x};
+  .uk-logo{
+    img{
+
+    }
+  }
+  &__item{
+    min-height: 60px;
+  }
+  .uk-navbar-item{
+    @extend .header__item;
+  }
+  .uk-navbar-nav{
+    @include media-breakpoint-up('m'){
+      gap: 59px;
+    }
+    >li{
+      >a{
+        color: #282828;
+        @extend .header__item;
+        font-size: 24px;
+        padding: 0 30px;
+        border-radius: 500px;
+        background-image: linear-gradient(#dedede, #fdfdfd);
+        border: 1px solid #c8c8c8;
+        &:hover{
+          @extend .header__hover;
+          img{
+            filter: brightness(0) invert(1);
+            -webkit-filter: brightness(0) invert(1);
+          }
+        }
+        &[aria-expanded="false"]{
+
+        }
+        &[aria-expanded="true"]{
+          @extend .header__hover;
+          img{
+            filter: brightness(0) invert(1);
+            -webkit-filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+  }
+  &__hover{
+    border-color: #9e884c;
+    background: #9e884c;
+    color: #ffffff;
+  }
+  &__dropdown{
+    padding: 20px;
+    border: 1px solid;
+    border-color: #9e884c;
+    border-radius: 4px;
+    &__box{
+      background: #f0f0f0;
+      border: 1px solid #9c9c9c;
+      min-height: 61px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      padding: 0 10px;
+      font-size: 30px;
+      color: #282828;
+      &--c1{
+        color: #ffffff;
+        background: #9e884c;
+        border-color: #9e884c;
+        min-width: 178px;
+      }
+    }
+  }
+}
+.arrow_box{
+  //position: relative;
+  //background: #88b7d5;
+  border: 1px solid #9e884c;
+  &:after,&:before{
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  $x:10px;
+  $w:2px;
+  &:after{
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #ffffff;
+    $y:calc(#{$x} - #{$w});
+    border-width: #{$y};
+    margin-left: calc(0px - #{$y});
+  }
+  &:before{
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: #9e884c;
+    border-width: #{$x};
+    margin-left: calc(0px - #{$x});
+  }
+}
